@@ -7,28 +7,28 @@
 
 @font-face {
   font-family: Shabnam;
-  src: url('Shabnam.eot');
-  src: url('Shabnam.eot?#iefix') format('embedded-opentype'),
-       url('Shabnam.woff') format('woff'),
-       url('Shabnam.ttf') format('truetype');
+  src: url('../assets/fonts/Farsi-Digits-Without-Latin/Shabnam-FD-WOL.eot');
+  src: url('../assets/fonts/Farsi-Digits-Without-Latin/Shabnam-FD-WOL.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Farsi-Digits-Without-Latin/Shabnam-FD-WOL.woff') format('woff'),
+       url('../assets/fonts/Farsi-Digits-Without-Latin/Shabnam-FD-WOL.ttf') format('truetype');
   font-weight: normal;
 }
 
 @font-face {
   font-family: Shabnam;
-  src: url('Shabnam-Bold.eot');
-  src: url('Shabnam-Bold.eot?#iefix') format('embedded-opentype'),
-       url('Shabnam-Bold.woff') format('woff'),
-       url('Shabnam-Bold.ttf') format('truetype');
-  font-weight: bold;
+  src: url('../assets/fonts/Farsi-Digits-Without-Latin/Shabnam-Bold-FD-WOL.eot');
+  src: url('../assets/fonts/Farsi-Digits-Without-Latin/Shabnam-Bold-FD-WOL.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Farsi-Digits-Without-Latin/Shabnam-Bold-FD-WOL.woff') format('woff'),
+       url('../assets/fonts/Farsi-Digits-Without-Latin/Shabnam-Bold-FD-WOL.ttf') format('truetype');
+   font-weight: bold;
 }
 
 @font-face {
   font-family: Shabnam;
-  src: url('Shabnam-Light.eot');
-  src: url('Shabnam-Light.eot?#iefix') format('embedded-opentype'),
-       url('Shabnam-Light.woff') format('woff'),
-       url('Shabnam-Light.ttf') format('truetype');
+  src: url('../assets/fonts/Farsi-Digits-Without-Latin/Shabnam-Light-FD-WOL.eot');
+  src: url('../assets/fonts/Farsi-Digits-Without-Latin/Shabnam-Light-FD-WOL.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/Farsi-Digits-Without-Latin/Shabnam-Light-FD-WOL.woff') format('woff'),
+       url('../assets/fonts/Farsi-Digits-Without-Latin/Shabnam-Light-FD-WOL.ttf') format('truetype');
   font-weight: 300;
 }
 
@@ -41,7 +41,18 @@
     content: "";
     clear: both;
     display: block;
+    line-height: 1.6;
 }
+
+.row{
+	line-height: 1.6;
+}
+
+input{
+	padding-bottom: 10px;
+	padding-right: 0;
+}
+
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -93,7 +104,7 @@ header, nav{
 	box-shadow: rgb(77,77,77) 0px 0px 1px 0.5px;
 }
 
-i{
+nav i{
 	color: white;
 	padding-left: 10%;
 }
@@ -103,9 +114,10 @@ i{
 	float: right;
 }
 
-.fa-envelope, .fa-lock{
+.fa-envelope, .fa-lock, .fa-user{
 	color: rgb(128,128,128);
 }
+
 
 section{
 	margin-top: 8%;
@@ -117,42 +129,34 @@ section{
 	text-align: center;
 	padding-bottom: 5%;
 	padding-top: 5%;
+	font-size: 25px;
+	font-weight: 600;
 }
+
+
 
 .modal{
 	padding: 0;
 	position: relative;
 	margin: auto;
-
+	min-width: 252px;
 	direction: rtl;
 	background: rgb(245,245,245);
 	-webkit-border-radius: 2px ;
 	        border-radius: 2px ;
 	box-shadow: rgb(88,88,88) 1px 1px 8px 1px; 
+	transition: 1s ease;
 }
 
 .form{
 	padding: 0;
 }
 
-.form a {
+a{
 	text-align: center;
+	padding-bottom: 1px;
 	text-decoration: none;
-}
-
-a:after{
-	position: absolute;
-    height: 1px;
-    margin: 0 auto;
-    content: '';
-    left: 0;
-    right: 0;
-    width: 26%;
-    color: #000;
-    border-bottom: solid rgb(128,128,128) 1px;
-    /*background-color: red;*/
-    left: 0;
-    bottom: 63px;
+	border-bottom: 1px solid;
 }
 
 a:focus{
@@ -164,15 +168,21 @@ label {
 }
 
 input{
-	border-width: 0 0 2px 0;
+	border-width: 0 0 0 0;
 	background: none;
 	border-color: none;
-	border-bottom-color: rgb(128,128,128);
 	padding-bottom: 0; 
 }
 
+.box{
+	border-bottom: 2px solid rgb(128,128,128);
+	padding-right: 1px;
+	padding-bottom: 2px;
+}
 
-:focus{
+
+
+input:focus{
 	border-bottom-color: rgb(217,52,108); 
 }
 
@@ -180,21 +190,20 @@ input[type="submit"]{
 	background: rgb(217,52,108);
 	color: white;
 	border: none;
+	margin-top: 5px;
 }
+
 
 
 input:focus{
 	outline: none;
 }
 
-.form-footer{
-	background: rgb(227,227,227);
-	text-align: center;
-	padding-right: 0;
-	padding-left: 0;
+ .box input:focus ~ label i {
+	color: rgb(217,52,108);
 }
 
 
-input:focus ~ label i{
-	color: rgb(217,52,108);
+.fa-envelope{
+	margin-right: -5px;
 }
